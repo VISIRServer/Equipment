@@ -1,0 +1,32 @@
+* All components are defined as, <type>_<card>_<place>
+* supported types are:
+* SHORTCUT
+* R, L, C
+* VFGENA
+
+*Instrument cards
+VFGENA_32_8          	A 0
+
+* USER DEFINED COMPONENTS
+
+* kort1
+R_1_1			E F 		10k
+R_1_2			D E 		1k
+SHORTCUT_1_3		C D
+R_1_4			B C 		1.8k
+R_1_5			A B 		1.5k
+R_1_6			G H 		220k
+SHORTCUT_1_7		F G
+R_1_8			H 0 		120k
+R_1_9			F 0 		82k
+C_1_10			C 0 		0.1u
+
+* Powersupply
+* Card 25 are disabling/enabling the power supply
+
+VDC+25V_24_4		A
+VDC-25V_24_5		G
+VDC+6V_24_3		D
+VDCCOM_24_2		0
+
+*End of components list

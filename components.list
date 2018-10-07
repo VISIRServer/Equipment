@@ -1,0 +1,117 @@
+* All components are defined as, <type>_<card>_<place>
+* supported types are:
+*R
+*C
+*L
+*Q
+*OP
+*POT
+*SHORTCUT
+*VDCCOM
+*VFGENA
+*VDC25V
+*VDC-25V
+*VDC6V
+*VFGENB
+*BLACKBOX
+
+*********************************************************************************************************
+*													*
+*********************************************************************************************************
+
+* Instrument card
+VFGENA_24_1          	 A 0
+
+* Special
+*BLACKBOX_999_999        0 A C
+
+* USER DEFINED COMPONENTS
+
+* kort1
+R_1_7		C E 1k
+R_1_5		C E 2.7k
+R_1_3		C E 10k
+R_1_10		D E 1k
+R_1_9		D E 2.7k
+R_1_8		D E 10k
+SHORTCUT_1_14	D F
+SHORTCUT_1_13	E F
+SHORTCUT_24_11	0 F
+R_1_1		A B 50
+L_1_2		C D 82m
+
+* kort2
+R_2_7		0 B 10k
+R_2_5		0 C 10k
+R_2_3		0 D 10k
+R_2_2		A B 10k
+R_2_1		B C 10k
+C_2_13		A B 56n
+C_2_11		0 B 56n
+C_2_10		0 C 56n
+R_2_9		B D 10k
+R_2_8		C D 10k
+
+* kort3
+R_3_7		A B 1k
+R_3_5		B C 1k
+R_3_3		C D 1k
+R_3_2		0 B 1k
+R_3_1		0 C 1k
+R_3_13		0 B 2.7k
+R_3_11		0 D 2.7k
+R_3_10		B C 2.7k
+R_3_9		C D 2.7k
+C_3_8		A C 0.22u
+
+* kort4
+OP_4_10:4_11:4_13	NC1 B D G NC2 C F NC3	uA741
+L_4_1		0 C 82m
+R_4_9		A B 1.6k
+R_4_8		B C 1.6k
+
+* kort5
+POT_5_1:5_2:5_13	A B C	10k
+SHORTCUT_5_7	A B
+SHORTCUT_5_5	B C
+SHORTCUT_5_3	C D
+SHORTCUT_5_9	A D
+SHORTCUT_5_8	B D
+
+SHORTCUT_2_10	A C
+
+SHORTCUT_24_6	0 A
+SHORTCUT_24_7	0 B
+SHORTCUT_24_8	0 C
+SHORTCUT_24_9	0 D
+
+
+* Powersupply
+* Card 24 are disabling/enabling the power supply
+
+*VDC+25
+VDC+25V_24_4:4_5	F
+VDC+25V_24_4:4_3	D
+
+*VDC-25
+VDC-25V_24_5:4_4	G
+
+*COM
+VDCCOM_24_2:4_6		E
+VDCCOM_24_2		0
+
+*VDC+6
+VDC+6V_24_3:4_2		H
+VDC+6V_24_3:4_7		A
+
+*blackbox special
+*C_X 		A C 0.22u
+*R_X 		0 C 10k
+
+BLACKBOX_2_5:3_8 0 A C
+
+* foo card 10
+*OP_10_1:10_2:10_3:10_4:10_5:10_7	NC A B G NC C F D	int1
+*R_10_6		B C 3.0k
+*SHORTCUT_10_8	0 E
+*SHORTCUT_10_9	0 D
